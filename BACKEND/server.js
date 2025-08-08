@@ -11,6 +11,10 @@ app.get('/api/mensaje', (req, res) => {
   res.json({ mensaje: "Hola desde Node.js jazziii" });
 });
 
+// Importar rutas de tasks
+const tasksRoutes = require('./routes/tasks');
+app.use('/api/tasks', tasksRoutes);
+
 app.listen(PORT, () => {
     console.log(`Servidor corriendo en http://localhost:${PORT}`);
 });
