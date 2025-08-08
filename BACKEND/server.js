@@ -12,7 +12,7 @@ app.get('/api/mensaje', (req, res) => {
 });
 
 // Importar rutas de tasks
-const tasksRoutes = require('./routes/tasks');
+const tasksRoutes = require('./Routes/tasks');
 app.use('/api/tasks', tasksRoutes);
 
 app.listen(PORT, () => {
