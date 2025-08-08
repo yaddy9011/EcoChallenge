@@ -1,1 +1,33 @@
-backend
+BACKEND
+
+# Para actualizar repositorios
+git fetch origin
+git merge origin/main
+
+# Express: para levantar el servidor
+npm install express
+
+# CORS: para permitir peticiones desde el frontend (React, etc.)
+npm install cors
+
+# pg: cliente oficial de PostgreSQL para Node.js
+npm install pg
+
+# 1. Instalar dependencias (solo la primera vez o si agregas nuevas)
+npm install
+
+# 2. Iniciar el servidor
+node server.js
+
+# 3. Detener el servidor (en consola donde corre)
+Ctrl + C
+
+# 4. Probar conexión a la API (opcional con curl)
+curl http://localhost:5000/api/mensaje
+curl http://localhost:5000/api/tasks
+
+# 5. Si quieres instalar una librería nueva (ejemplo express)
+npm install express
+
+# 6. Ver librerías instaladas
+npm list --depth=0

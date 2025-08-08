@@ -1,6 +1,6 @@
 
 
-const ProfilePage= () =>{
+export default function  ProfilePage() {
     const consulta=()=>{
 
     }
