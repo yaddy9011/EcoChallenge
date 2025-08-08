@@ -1,0 +1,23 @@
+:root{
+    --verde-claro:#A3D9A5;
+    --verde-oscuro:#3C6E47;
+    --beige:#F4F1DE;
+    --marron-suavecito:#DDBEA9;
+    --gris-suavecito:#E6E6E6;   
+}
+
+body{
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, 'sans-serif';
+    background-color: var(--beige);
+    color: #2e2e2e;
+}
+
+.ProfileContainer{
+    max-width: 900px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 0 15px rgba(60,110,71,0.1);
+}
