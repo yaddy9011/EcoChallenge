@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { login } from "../api";
 import { useNavigate } from "react-router-dom";
-import './ProfilePage.css'; // Ajuste si está en otra carpeta
+import '../Styles/ProfilePage.css'; // Ajuste si está en otra carpeta
 
 export default function LoginPage() {
   const [email, setEmail] = useState("");
