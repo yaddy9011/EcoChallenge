@@ -1,5 +1,5 @@
 
-
+import "../Styles/ProfilePage.css"
 export default function  ProfilePage() {
     const consulta=()=>{
 
