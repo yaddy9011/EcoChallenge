@@ -1,7 +1,7 @@
-
 import { useState } from "react";
 import { login } from "../api";
 import { useNavigate } from "react-router-dom";
+import './ProfilePage.css'; // Ajuste si está en otra carpeta
 
 export default function LoginPage() {
   const [email, setEmail] = useState("");
@@ -21,55 +21,26 @@ export default function LoginPage() {
   };
 
   return (
-    <div className="flex items-center justify-center min-h-screen bg-gray-100">
-      <form
-        onSubmit={onSubmit}
-        className="bg-white p-8 rounded-2xl shadow-lg w-full max-w-md"
-      >
-        <h1 className="text-2xl font-semibold text-center text-gray-800 mb-6">
-          Iniciar sesión
-        </h1>
-
-        {err && (
-          <p className="text-red-600 text-sm mb-4 text-center">{err}</p>
-        )}
-
-        <div className="mb-4">
-          <label className="block text-sm font-medium text-gray-700 mb-1">
-            Correo electrónico
-          </label>
-          <input
-            type="email"
-            placeholder="ejemplo@ucad.edu.mx"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-            className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600"
-            required
-          />
-        </div>
-
-        <div className="mb-6">
-          <label className="block text-sm font-medium text-gray-700 mb-1">
-            Contraseña
-          </label>
-          <input
-            type="password"
-            placeholder="••••••••"
-            value={contraseña}
-            onChange={(e) => setContraseña(e.target.value)}
-            className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600"
-            required
-          />
-        </div>
-
-        <button
-          type="submit"
-          className="w-full bg-blue-600 text-white py-2 rounded-lg font-medium hover:bg-blue-700 transition"
-        >
-          Entrar
-        </button>
+    <div className="login-container">
+      <form onSubmit={onSubmit} className="login-form">
+        <h1>Iniciar sesión</h1>
+        {err && <p className="login-error">{err}</p>}
+        <input
+          placeholder="Correo electrónico"
+          type="email"
+          value={email}
+          onChange={e => setEmail(e.target.value)}
+          required
+        />
+        <input
+          placeholder="Contraseña"
+          type="password"
+          value={contraseña}
+          onChange={e => setContraseña(e.target.value)}
+          required
+        />
+        <button type="submit">Entrar</button>
       </form>
     </div>
   );
 }
-
