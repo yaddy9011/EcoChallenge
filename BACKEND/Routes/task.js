@@ -1,7 +1,7 @@
 // BACKEND/routes/tasks.js
 const express = require('express');
 const router = express.Router();
-const pool = require('../db');
+const pool = require('../db.js');
 
 // GET todas
 router.get('/', async (_req, res) => {
@@ -31,6 +31,19 @@ router.post('/', async (req, res) => {
     const { rows } = await pool.query(
       'INSERT INTO tasks (title, done) VALUES ($1, $2) RETURNING *;',
       [title, done]
+    );
+    res.status(201).json(rows[0]);
+  } catch (e) {
+    res.status(500).json({ error: 'Error creando tarea' });
+  }
+});
+
+router.post('/prueba', async (req, res) => {
+  try {
+    const {mensaje}= req.body;
+    const { rows } = await pool.query(
+      "INSERT INTO prueba (mensaje) VALUES ('HELLO') RETURNING *;",
+      [mensaje]
     );
     res.status(201).json(rows[0]);
   } catch (e) {
