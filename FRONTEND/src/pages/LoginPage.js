@@ -1,10 +1,9 @@
-
 import { useState } from "react";
 import { login } from "../api";
 import { useNavigate } from "react-router-dom";
+import '../Styles/ProfilePage.css'; // Ajuste si está en otra carpeta
 
 export default function LoginPage() {
-  
   const [email, setEmail] = useState("");
   const [contraseña, setContraseña] = useState("");
   const [err, setErr] = useState("");
@@ -22,12 +21,26 @@ export default function LoginPage() {
   };
 
   return (
-    <form onSubmit={onSubmit}>
-      <h1>Iniciar sesión</h1>
-      {err && <p style={{color:"red"}}>{err}</p>}
-      <input placeholder="Email" value={email} onChange={e=>setEmail(e.target.value)} />
-      <input placeholder="Contraseña" type="password" value={contraseña} onChange={e=>setContraseña(e.target.value)} />
-      <button>Entrar</button>
-    </form>
+    <div className="login-container">
+      <form onSubmit={onSubmit} className="login-form">
+        <h1>Iniciar sesión</h1>
+        {err && <p className="login-error">{err}</p>}
+        <input
+          placeholder="Correo electrónico"
+          type="email"
+          value={email}
+          onChange={e => setEmail(e.target.value)}
+          required
+        />
+        <input
+          placeholder="Contraseña"
+          type="password"
+          value={contraseña}
+          onChange={e => setContraseña(e.target.value)}
+          required
+        />
+        <button type="submit">Entrar</button>
+      </form>
+    </div>
   );
 }

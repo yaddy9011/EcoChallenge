@@ -1,23 +1,89 @@
-:root{
-    --verde-claro:#A3D9A5;
-    --verde-oscuro:#3C6E47;
-    --beige:#F4F1DE;
-    --marron-suavecito:#DDBEA9;
-    --gris-suavecito:#E6E6E6;   
+:root {
+    --verde-claro: #A3D9A5;
+    --verde-oscuro: #3C6E47;
+    --beige: #F4F1DE;
+    --marron-suavecito: #DDBEA9;
+    --gris-suavecito: #E6E6E6;
 }
 
-body{
+body {
     margin: 0;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, 'sans-serif';
     background-color: var(--beige);
     color: #2e2e2e;
 }
 
-.ProfileContainer{
+.ProfileContainer {
     max-width: 900px;
     margin: 2rem auto;
     padding: 2rem;
     background-color: white;
     border-radius: 12px;
-    box-shadow: 0 0 15px rgba(60,110,71,0.1);
+    box-shadow: 0 0 15px rgba(60, 110, 71, 0.1);
+}
+
+/* ===== Estilos para LoginPage ===== */
+
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: var(--beige);
+}
+
+.login-form {
+    background-color: white;
+    padding: 2.5rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(60, 110, 71, 0.2);
+    width: 100%;
+    max-width: 400px;
+}
+
+.login-form h1 {
+    text-align: center;
+    color: var(--verde-oscuro);
+    margin-bottom: 1.5rem;
+    font-size: 1.8rem;
+}
+
+.login-form input {
+    width: 100%;
+    padding: 0.75rem;
+    margin-bottom: 1rem;
+    border: 1px solid var(--gris-suavecito);
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: border-color 0.3s;
+    background-color: #fff;
+}
+
+.login-form input:focus {
+    border-color: var(--verde-oscuro);
+    outline: none;
+}
+
+.login-form button {
+    width: 100%;
+    background-color: var(--verde-oscuro);
+    color: white;
+    padding: 0.75rem;
+    font-size: 1rem;
+    font-weight: 600;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.login-form button:hover {
+    background-color: #345f3d;
+}
+
+.login-error {
+    color: #dc2626;
+    text-align: center;
+    margin-bottom: 1rem;
+    font-size: 0.95rem;
 }
