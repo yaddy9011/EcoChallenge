@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { login } from "../api";
 import { useNavigate } from "react-router-dom";
-import '../Styles/ProfilePage.css'; // Ajuste si está en otra carpeta
+import '../Styles/ProfilePage.css';
 
 export default function LoginPage() {
   const [email, setEmail] = useState("");
@@ -25,6 +25,7 @@ export default function LoginPage() {
       <form onSubmit={onSubmit} className="login-form">
         <h1>Iniciar sesión</h1>
         {err && <p className="login-error">{err}</p>}
+        
         <input
           placeholder="Correo electrónico"
           type="email"
@@ -32,6 +33,7 @@ export default function LoginPage() {
           onChange={e => setEmail(e.target.value)}
           required
         />
+        
         <input
           placeholder="Contraseña"
           type="password"
@@ -39,7 +41,20 @@ export default function LoginPage() {
           onChange={e => setContraseña(e.target.value)}
           required
         />
-        <button type="submit">Entrar</button>
+        
+        <button type="submit" className="login-button">
+          Entrar
+
+        </button>
+
+        <button
+          type="button"
+          className="login-button"
+          style={{ marginTop: "10px" }}
+          onClick={() => navigate("/register")}
+        >
+          Registrarse
+        </button>
       </form>
     </div>
   );
