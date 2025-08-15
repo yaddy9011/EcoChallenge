@@ -81,8 +81,24 @@ h1{
     text-align: center;
 }
 
-.desbloqueado {
-  background-color: gold;
+.desbloqueado1 {
+  background-image: url(https://i.pinimg.com/474x/5c/f5/b8/5cf5b8fcce479b03cde51e2e8051df41.jpg);
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+}
+
+.desbloqueado2 {
+  background-image: url(https://thumbs.dreamstime.com/b/el-hombre-con-gafas-est%C3%A1-pensando-inteligente-refleja-trabajo-intelectual-historieta-de-dibujos-animados-estilo-moderno-241859006.jpg);
+  height: 100%;
+  background-size: cover;
+}
+
+.desbloqueado3 {
+  background-image: url(https://m.media-amazon.com/images/I/61X4RY6UdBL.jpg) ;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
 }
 
 /* ===== Estilos para LoginPage ===== */
