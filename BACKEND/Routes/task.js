@@ -3,6 +3,28 @@ const express = require('express');
 const router = express.Router();
 const pool = require('../db.js');
 
+
+router.post('/login', async (req, res) => {
+  try {
+    const { correo, contrasena } = req.body;
+
+    const { rows } = await pool.query(
+      'SELECT * FROM usuarios WHERE correo = $1 AND contrasena = $2;',
+      [correo, contrasena]
+    );
+
+    if (rows.length === 0) {
+      return res.status(404).json({ error: 'Usuario o contraseña incorrectos' });
+    }
+
+    res.status(200).json(rows[0]);
+  } catch (e) {
+    res.status(500).json({ error: 'Error en el servidor' });
+  }
+});
+
+
+
 // GET todas
 router.get('/', async (_req, res) => {
   try {
