@@ -36,23 +36,23 @@ export default function ProfilePage() {
 
                 <div className="Logros">
                     <h2>Logros</h2>
+
                     <div 
-                        className={`Logro1 ${logros.logro1 ? "desbloqueado" : ""}`} 
+                        className={`Logro1 ${logros.logro1 ? "desbloqueado1" : ""}`} 
                         title="Princeso: Obtén 100 puntos"
                     >
-                       Princeso
                     </div>
+
+
                     <div 
-                        className={`Logro2 ${logros.logro2 ? "desbloqueado" : ""}`} 
+                        className={`Logro2 ${logros.logro2 ? "desbloqueado2" : ""}`} 
                         title="Experto: Obtén 500 puntos"
                     >
-                        Experto
                     </div>
                     <div 
-                        className={`Logro3 ${logros.logro3 ? "desbloqueado" : ""}`} 
+                        className={`Logro3 ${logros.logro3 ? "desbloqueado3" : ""}`} 
                         title="Leyenda: Obtén 1000 puntos"
                     >
-                        Leyenda
                     </div>
                     <p>Puntuación: {puntuacion}</p>
                 </div>
