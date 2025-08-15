@@ -1,7 +1,11 @@
 import { useState } from "react";
 import "../Styles/ProfilePage.css";
+import {useDB} from "../../context/Global-Context"
 
 export default function ProfilePage() {
+
+    const SEGS=useDB()
+
     const [puntuacion, setPuntuacion] = useState(0);
     const [logros, setLogros] = useState({
         logro1: false,
