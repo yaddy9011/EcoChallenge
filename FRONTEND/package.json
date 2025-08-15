@@ -3,10 +3,11 @@
   "version": "1.0.0",
   "private": true,
   "dependencies": {
-    "react": "18.2.0",
-    "react-dom": "18.2.0",
+    "react": "^19.1.1",
+    "react-dom": "^19.1.1",
+    "react-router-dom": "^6.23.0",
     "react-scripts": "5.0.1",
-    "react-router-dom": "^6.23.0"
+    "vite": "^7.1.2"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -25,5 +26,9 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "@types/react": "^19.1.10",
+    "@types/react-dom": "^19.1.7"
   }
 }
