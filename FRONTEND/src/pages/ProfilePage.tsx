@@ -12,7 +12,7 @@ export default function ProfilePage() {
         logro2: false,
         logro3: false
     });
-
+    
     const aumentarPuntuacion = (valor) => {
         const nuevaPuntuacion = puntuacion + valor;
         setPuntuacion(nuevaPuntuacion);
